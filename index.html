@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f5">
+<title>For Princess Navya ♡</title>
+<style>
+:root{--rose:#e75d83;--deep:#a8325a;--pink:#fff0f5;--cream:#fffaf5;--ink:#593747;--gold:#e8bd78}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:Georgia,"Times New Roman",serif;background:radial-gradient(circle at 15% 10%,#fff 0,transparent 30%),linear-gradient(145deg,#fff5f7,#ffe7ee 55%,#fff8f0);overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid #b33c66;outline-offset:3px}
+.music-toggle{position:fixed;z-index:10;top:14px;right:14px;border:1px solid #f0c3d0;background:#ffffffd9;color:var(--deep);padding:10px 13px;border-radius:999px;box-shadow:0 6px 22px #9c35501c;font:600 13px system-ui,sans-serif}
+main{width:min(760px,100%);margin:auto;padding:54px 18px 48px;position:relative;z-index:1}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font:700 11px system-ui,sans-serif;color:#bd5d7c}
+.hero{text-align:center;padding:26px 0 22px}
+h1{font-size:clamp(2.3rem,9vw,4.3rem);line-height:1.04;letter-spacing:-.045em;margin:15px 0;color:#9f3158;font-weight:normal}
+h1 span{font-style:italic;color:#d75c80}
+.subtitle{font-size:1.1rem;line-height:1.7;max-width:520px;margin:0 auto;color:#7c5363}
+.teddy-scene{height:205px;display:flex;align-items:center;justify-content:center;position:relative;margin:8px auto 0}
+.teddy{font-size:106px;filter:drop-shadow(0 10px 7px #a94b5c1b);animation:bob 3s ease-in-out infinite;transform-origin:center}
+.heart-float{position:absolute;font-size:25px;animation:float 3.5s ease-in-out infinite}
+.h1{left:22%;top:25%;animation-delay:-1s}.h2{right:22%;top:15%;animation-delay:-2s}.h3{right:28%;bottom:15%;font-size:19px;animation-delay:-.5s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+@keyframes float{0%,100%{transform:translateY(0) scale(.9);opacity:.6}50%{transform:translateY(-15px) scale(1.12);opacity:1}}
+.card{background:#ffffffb8;border:1px solid #f3cbd6;border-radius:25px;padding:clamp(20px,5vw,34px);box-shadow:0 18px 50px #8b3a5010;margin:20px 0;backdrop-filter:blur(8px)}
+.card h2{font-weight:normal;font-size:clamp(1.5rem,5vw,2rem);margin:0 0 12px;color:#a43b60}
+.card p{font-size:1.06rem;line-height:1.85;margin:10px 0}
+.center{text-align:center}
+.primary,.secondary{border-radius:999px;padding:13px 21px;border:0;transition:transform .18s,box-shadow .18s;font:600 14px system-ui,sans-serif}
+.primary{color:white;background:linear-gradient(135deg,#e66d90,#b93d66);box-shadow:0 9px 20px #c34a701f}
+.secondary{color:#a43b60;background:#fff;border:1px solid #efbfd0}
+.primary:hover,.secondary:hover{transform:translateY(-2px);box-shadow:0 10px 22px #9d3a581c}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px}
+.hidden{display:none!important}
+.letter{background:#fffaf4;border:1px solid #f2d9c4;border-radius:16px;padding:22px 20px;position:relative}
+.letter:before{content:"";position:absolute;inset:8px;border:1px dashed #e9c9b4;border-radius:10px;pointer-events:none}
+.letter p{position:relative}
+.signature{font-size:1.35rem!important;color:#b54168;font-style:italic}
+.promise-list{display:grid;gap:10px;margin-top:16px}
+.promise{display:flex;gap:12px;align-items:flex-start;background:#fff8fa;border:1px solid #f7d9e2;border-radius:14px;padding:13px;text-align:left;line-height:1.55}
+.promise b{color:#c34f75;font-size:1.1rem}
+.final-heart{font-size:62px;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+footer{text-align:center;padding:22px 0 10px;color:#986c7c;font:12px system-ui,sans-serif}
+.sparkle{position:fixed;pointer-events:none;z-index:0;opacity:.45;font-size:18px;animation:drift 12s linear infinite}
+@keyframes drift{from{transform:translateY(105vh) rotate(0)}to{transform:translateY(-10vh) rotate(240deg)}}
+.small{font:12px/1.6 system-ui,sans-serif;color:#9a7180}
+@media(max-width:420px){main{padding-top:58px}.teddy-scene{height:170px}.teddy{font-size:88px}.card{border-radius:21px}.music-toggle{font-size:12px;padding:9px 11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+.memory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.memory-photo{margin:0;overflow:hidden;border-radius:16px;background:#fff0f5;border:1px solid #f3cbd6;box-shadow:0 8px 24px #8b3a5010}
+.memory-photo button{display:block;width:100%;padding:0;border:0;background:transparent;line-height:0}
+.memory-photo img{display:block;width:100%;height:250px;object-fit:cover;transition:transform .35s ease}
+.memory-photo button:hover img{transform:scale(1.035)}
+.memory-photo figcaption{padding:10px 8px 12px;text-align:center;color:#986174;font:12px/1.4 system-ui,sans-serif}
+.memory-photo.wide{grid-column:1/-1}
+.memory-photo.wide img{height:320px;object-fit:contain;background:#fff8fa}
+.photo-lightbox{position:fixed;inset:0;z-index:30;background:#2d1424eF;display:flex;align-items:center;justify-content:center;padding:18px}
+.photo-lightbox img{max-width:100%;max-height:86vh;object-fit:contain;border-radius:12px;box-shadow:0 12px 50px #0006}
+.photo-lightbox button{position:absolute;top:16px;right:16px;border:1px solid #fff8;background:#ffffffed;color:#87324f;border-radius:999px;padding:10px 14px;font:600 14px system-ui,sans-serif}
+@media(max-width:480px){.memory-grid{gap:8px}.memory-photo img{height:190px}.memory-photo.wide img{height:250px}.memory-photo figcaption{font-size:11px;padding:8px 5px}}
+
+</style>
+</head>
+<body>
+<button class="music-toggle" id="musicToggle" aria-pressed="false" title="Turn gentle background music on or off">♫ Music: Off</button>
+<div class="sparkle" style="left:7%;animation-delay:-2s">♡</div><div class="sparkle" style="left:24%;animation-delay:-8s">✧</div><div class="sparkle" style="left:79%;animation-delay:-5s">♡</div><div class="sparkle" style="left:91%;animation-delay:-10s">✦</div>
+<main>
+  <header class="hero">
+    <div class="eyebrow">A little page, from my heart to yours</div>
+    <div class="teddy-scene" aria-label="A teddy bear surrounded by hearts">
+      <span class="heart-float h1">♡</span><span class="heart-float h2">♥</span><span class="heart-float h3">✧</span>
+      <div class="teddy" role="img" aria-label="teddy bear">🧸</div>
+    </div>
+    <h1>For my <span>Princess Navya</span></h1>
+    <p class="subtitle">Some feelings are too important to leave unsaid. So I made you this little corner of the world.</p>
+    <div class="actions"><button class="primary" id="beginBtn">Open my heart ♡</button></div>
+  </header>
+
+  <section class="card center" id="songCard">
+    <div class="eyebrow">Our song ♡</div>
+    <h2>A little music for us</h2>
+    <p class="small">A song chosen for you, Princess. Tap “Open my heart” and let it play softly in the background.</p>
+    <div style="font-size:54px;line-height:1.3;margin:18px auto" aria-hidden="true">🎧💗</div>
+    <p class="small">Use the music button in the top-right to pause or resume the song.</p>
+    <audio id="backgroundSong" preload="auto" loop>
+      <source src="background-song.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+  </section>
+
+  <section class="card" id="ourMemories">
+    <div class="eyebrow">Little pieces of us ♡</div>
+    <h2>Our memories</h2>
+    <p>These moments mean so much to me. Whatever we're working through, I'm grateful for the memories we've made and the chance to make more—together, with love and understanding.</p>
+    <div class="memory-grid">
+      <figure class="memory-photo">
+        <button type="button" class="photo-open" data-photo="photos/memory-1.jpg" aria-label="Open photo 1">
+          <img src="photos/memory-1.jpg" alt="A photo of Niks and Princess Navya, memory 1" loading="lazy">
+        </button>
+        <figcaption>One of my favourite smiles ♡</figcaption>
+      </figure>
+      <figure class="memory-photo">
+        <button type="button" class="photo-open" data-photo="photos/memory-2.jpg" aria-label="Open photo 2">
+          <img src="photos/memory-2.jpg" alt="A photo of Niks and Princess Navya, memory 2" loading="lazy">
+        </button>
+        <figcaption>A little moment, a lot of love</figcaption>
+      </figure>
+      <figure class="memory-photo">
+        <button type="button" class="photo-open" data-photo="photos/memory-3.jpg" aria-label="Open photo 3">
+          <img src="photos/memory-3.jpg" alt="A photo of Niks and Princess Navya, memory 3" loading="lazy">
+        </button>
+        <figcaption>My favourite kind of together</figcaption>
+      </figure>
+      <figure class="memory-photo">
+        <button type="button" class="photo-open" data-photo="photos/memory-4.jpg" aria-label="Open photo 4">
+          <img src="photos/memory-4.jpg" alt="A photo of Niks and Princess Navya, memory 4" loading="lazy">
+        </button>
+        <figcaption>A memory I want to keep</figcaption>
+      </figure>
+      <figure class="memory-photo wide">
+        <button type="button" class="photo-open" data-photo="photos/memory-5.jpg" aria-label="Open photo 5">
+          <img src="photos/memory-5.jpg" alt="A photo of Niks and Princess Navya, memory 5" loading="lazy">
+        </button>
+        <figcaption>Us, being us 💗</figcaption>
+      </figure>
+    </div>
+    <p class="small center" style="margin-top:14px">Tap any photo to see it larger. ♡</p>
+  </section>
+
+  <div class="photo-lightbox hidden" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Expanded memory photo">
+    <button type="button" id="closePhoto">Close ✕</button>
+    <img id="lightboxImage" src="" alt="Expanded photo of Niks and Princess Navya">
+  </div>
+
+  <section class="card hidden" id="apology">
+    <div class="eyebrow">First, something I need you to know</div>
+    <h2>I'm sorry, my love.</h2>
+    <p>My princess, I know that saying “sorry” doesn't magically undo hurt feelings. I don't want to rush you into being okay, or ask you to forget what happened just because I feel bad.</p>
+    <p>I want to listen to you properly, understand how you felt, and take responsibility for my part. You deserve patience, honesty, and care—not just pretty words.</p>
+    <p>You're important to me, baby. What we have matters to me, and so does the way I make you feel. I'm sorry for the moments when my actions didn't show that well enough.</p>
+    <div class="actions"><button class="primary" id="letterBtn">There's more I want to say 💌</button></div>
+  </section>
+
+  <section class="card hidden" id="letterSection">
+    <div class="eyebrow">A letter, written with love</div>
+    <h2>To my favourite person…</h2>
+    <div class="letter">
+      <p>My dearest Princess Navya,</p>
+      <p>If I could sit beside you right now, I'd hold your hand gently and let you speak without interrupting. I'd want you to feel heard, not pressured to forgive me before you're ready.</p>
+      <p>I know I won't always get everything right. But I want to keep learning how to love you better—in the little things, in difficult conversations, and especially in the moments when it's easier to become defensive than to understand.</p>
+      <p>I don't expect one message to fix everything. I just hope it reminds you that behind these words is Niks, who cares about you deeply and wants to make things right through actions, not promises alone.</p>
+      <p>Whenever you're ready, I'd like to talk, listen, and find our way back to a softer place together. No pressure. Just honesty, warmth, and love.</p>
+      <p class="signature">With all my heart,<br>Niks ♡</p>
+    </div>
+    <div class="actions"><button class="primary" id="promiseBtn">My promises to you 🤍</button></div>
+  </section>
+
+  <section class="card hidden" id="promisesSection">
+    <div class="eyebrow">Not just words</div>
+    <h2>What I want to do better</h2>
+    <div class="promise-list">
+      <div class="promise"><b>♡</b><span><strong>Listen to understand.</strong><br>I'll make room for your feelings instead of rushing to explain mine.</span></div>
+      <div class="promise"><b>♡</b><span><strong>Show it through actions.</strong><br>I'll work on the things that hurt you, not rely on apologies alone.</span></div>
+      <div class="promise"><b>♡</b><span><strong>Respect your time.</strong><br>You don't have to be ready to talk or forgive before you genuinely feel ready.</span></div>
+      <div class="promise"><b>♡</b><span><strong>Choose kindness, even when it's hard.</strong><br>I want us to feel safe being honest with each other.</span></div>
+    </div>
+    <div class="actions"><button class="primary" id="finalBtn">One last little thing… ✨</button></div>
+  </section>
+
+  <section class="card center hidden" id="finalSection">
+    <div class="final-heart">💗</div>
+    <h2>You're precious to me, Princess.</h2>
+    <p>I can't promise to be perfect. I can promise to keep trying, to own my mistakes, and to treat your heart with the care it deserves.</p>
+    <p>Thank you for forgiving me, my baby. If there's still a little hurt in your heart, I want to keep showing you how deeply I love you. You mean more to me than I can ever explain, and I never want you to doubt how precious you are to me.</p>
+    <p style="font-size:1.5rem;color:#b54168">I love you, baby. ♡</p>
+    <div class="actions">
+      <button class="primary" id="talkBtn">I love you so, so much, baby 💗</button>
+      <button class="secondary" id="restartBtn">Read it again</button>
+    </div>
+    <p class="small hidden" id="talkNote">You have my heart, baby. I love you more than these words can say, and I'll keep showing you every day. ♡</p>
+  </section>
+  <footer>Made with care, by Niks · just for Princess Navya ♡</footer>
+</main>
+<script>
+const $ = id => document.getElementById(id);
+const sections = ["apology","letterSection","promisesSection","finalSection"];
+function reveal(id){$(id).classList.remove("hidden");setTimeout(()=>$(id).scrollIntoView({behavior:"smooth",block:"center"}),80)}
+$("beginBtn").addEventListener("click",()=>reveal("apology"));
+$("letterBtn").addEventListener("click",()=>reveal("letterSection"));
+$("promiseBtn").addEventListener("click",()=>reveal("promisesSection"));
+$("finalBtn").addEventListener("click",()=>reveal("finalSection"));
+$("talkBtn").addEventListener("click",()=>{$("talkNote").classList.remove("hidden");$("talkBtn").textContent="You have all my love, baby ♡";confettiHearts()});
+$("restartBtn").addEventListener("click",()=>{sections.forEach(id=>$(id).classList.add("hidden"));window.scrollTo({top:0,behavior:"smooth"})});
+function confettiHearts(){for(let i=0;i<18;i++){const e=document.createElement("span");e.textContent=["♡","♥","💗","✧"][i%4];e.style.cssText=`position:fixed;z-index:20;left:${Math.random()*100}vw;top:85vh;font-size:${16+Math.random()*20}px;pointer-events:none;transition:transform 2.6s ease-out,opacity 2.6s;`;document.body.appendChild(e);requestAnimationFrame(()=>{e.style.transform=`translate(${(Math.random()-.5)*130}px,-${45+Math.random()*70}vh) rotate(${Math.random()*220}deg)`;e.style.opacity="0"});setTimeout(()=>e.remove(),2800)}}
+// Play the uploaded MP3 locally with browser-friendly user-gesture playback.
+const musicButton = $("musicToggle");
+const audio = $("backgroundSong");
+let musicOn = false;
+function setMusicState(on){
+  musicOn = on;
+  musicButton.textContent = on ? "♫ Music: On" : "♫ Music: Off";
+  musicButton.setAttribute("aria-pressed", String(on));
+}
+async function startMusic(){
+  try {
+    await audio.play();
+    setMusicState(true);
+  } catch (err) {
+    setMusicState(false);
+    musicButton.textContent = "♫ Tap to play";
+  }
+}
+musicButton.textContent = "♫ Music: Off";
+musicButton.setAttribute("aria-pressed", "false");
+musicButton.addEventListener("click", async ()=>{
+  if (musicOn) {
+    audio.pause();
+    setMusicState(false);
+  } else {
+    await startMusic();
+  }
+});
+$("beginBtn").addEventListener("click", ()=>{
+  if (!musicOn) startMusic();
+});
+audio.addEventListener("pause", ()=>setMusicState(false));
+audio.addEventListener("play", ()=>setMusicState(true));
+
+// Tap a memory photo to open it in a full-screen lightbox.
+const photoLightbox = $("photoLightbox");
+const lightboxImage = $("lightboxImage");
+document.querySelectorAll(".photo-open").forEach(button=>{
+  button.addEventListener("click",()=>{
+    lightboxImage.src = button.dataset.photo;
+    photoLightbox.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
+});
+function closePhotoLightbox(){
+  photoLightbox.classList.add("hidden");
+  lightboxImage.src = "";
+  document.body.style.overflow = "";
+}
+$("closePhoto").addEventListener("click", closePhotoLightbox);
+photoLightbox.addEventListener("click", event=>{
+  if(event.target === photoLightbox) closePhotoLightbox();
+});
+document.addEventListener("keydown", event=>{
+  if(event.key === "Escape" && !photoLightbox.classList.contains("hidden")) closePhotoLightbox();
+});
+
+</script>
+</body>
+</html>
